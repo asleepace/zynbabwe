@@ -5,6 +5,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
+
+    // JSX
     "jsx": "react-jsx",
     "allowJs": true,
 

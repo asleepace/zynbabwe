@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "cSpell.ignoreWords": [
+    "elysia",
+    "zynbabwe",
+    "elysiajs",
+    "outdir",
+  ]
+}
