@@ -69,6 +69,9 @@ const Testimony = () => {
         className="max-w-[400px]"
       />
       <div className="flex flex-col gap-y-8">
+        <p className="text-6xl font-[Caprasimo] semi-bold tracking-wider text-light">
+          Tactical Zyn Holster
+        </p>
         <p className="prose text-light italic text-xl opacity-90 leading-8">
           "Easily the best product of the year, hands down, literally!"
         </p>

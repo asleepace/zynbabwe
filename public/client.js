@@ -23549,10 +23549,23 @@ function clsx() {
 }
 var clsx_default = clsx;
 
-// src/components/Container.tsx
+// src/components/AfricanTrees.tsx
 var jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
-var Container = ({ children, className }) => {
+function AfricanTrees({ className }) {
   return jsx_dev_runtime.jsxDEV("div", {
+    className: clsx_default("fixed left-0 right-0 top-0 bottom-0 z-0 flex flex-col items-end justify-end", className),
+    children: jsx_dev_runtime.jsxDEV("img", {
+      src: "./public/jungle.svg",
+      alt: "jungle",
+      className: "h-full w-auto"
+    }, undefined, false, undefined, this)
+  }, undefined, false, undefined, this);
+}
+
+// src/components/Container.tsx
+var jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
+var Container = ({ children, className }) => {
+  return jsx_dev_runtime2.jsxDEV("div", {
     className: clsx_default("items-center justify-center mx-auto w-full h-full flex-grow flex flex-1 max-w-[800px]", className),
     children
   }, undefined, false, undefined, this);
@@ -23560,9 +23573,9 @@ var Container = ({ children, className }) => {
 
 // src/components/Button.tsx
 var import_react = __toESM(require_react(), 1);
-var jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
-var Button = import_react.memo(({ variant, text, children, className }) => {
-  return jsx_dev_runtime2.jsxDEV("button", {
+var jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1);
+var Button = import_react.memo(({ variant, text, children, growOnHover = true, className }) => {
+  return jsx_dev_runtime3.jsxDEV("button", {
     className: clsx_default("flex flex-row items-center justify-center self-stretch rounded-2xl p-3 font-bold tracking-wide text-lg text-light hover:text-white bg-transparent", {
       "bg-z-green hover:bg-green-600 hover:text-white": variant === "green-highlight",
       "bg-z-red hover:bg-red-600 hover:text-white": variant === "red-highlight",
@@ -23574,49 +23587,49 @@ var Button = import_react.memo(({ variant, text, children, className }) => {
 });
 
 // src/components/Hero.tsx
-var jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1);
 function Hero({ className }) {
-  return jsx_dev_runtime3.jsxDEV("div", {
+  return jsx_dev_runtime4.jsxDEV("div", {
     className: "flex flex-col items-center justify-center gap-y-4",
     children: [
-      jsx_dev_runtime3.jsxDEV(Testimony, {}, undefined, false, undefined, this),
-      jsx_dev_runtime3.jsxDEV("div", {
+      jsx_dev_runtime4.jsxDEV(Testimony, {}, undefined, false, undefined, this),
+      jsx_dev_runtime4.jsxDEV("div", {
         className: "grid grid-cols-2 gap-x-4",
         children: [
-          jsx_dev_runtime3.jsxDEV("div", {
+          jsx_dev_runtime4.jsxDEV("div", {
             className: "flex flex-col items-center justify-center",
-            children: jsx_dev_runtime3.jsxDEV(GridCard, {
+            children: jsx_dev_runtime4.jsxDEV(GridCard, {
               className: "bg-slate-300",
-              children: jsx_dev_runtime3.jsxDEV("img", {
+              children: jsx_dev_runtime4.jsxDEV("img", {
                 src: "./public/holster.webp",
                 alt: "holster",
                 className: "rounded-2xl overflow-clip aspect-square"
               }, undefined, false, undefined, this)
             }, undefined, false, undefined, this)
           }, undefined, false, undefined, this),
-          jsx_dev_runtime3.jsxDEV("div", {
+          jsx_dev_runtime4.jsxDEV("div", {
             className: "flex flex-col items-center justify-center",
-            children: jsx_dev_runtime3.jsxDEV(GridCard, {
+            children: jsx_dev_runtime4.jsxDEV(GridCard, {
               className: "bg-accent self-stretch flex flex-col flex-1 p-4 rounded-3xl items-center justify-between gap-y-4",
               children: [
-                jsx_dev_runtime3.jsxDEV("div", {
+                jsx_dev_runtime4.jsxDEV("div", {
                   className: "flex flex-col flex-1 pt-8 items-center justify-center gap-y-4",
                   children: [
-                    jsx_dev_runtime3.jsxDEV("p", {
+                    jsx_dev_runtime4.jsxDEV("p", {
                       className: "text-xs text-white opacity-50 mb-4",
                       children: "Tactical. Trusted. Tobacco."
                     }, undefined, false, undefined, this),
-                    jsx_dev_runtime3.jsxDEV("p", {
+                    jsx_dev_runtime4.jsxDEV("p", {
                       className: "text-7xl font-black self-stretch text-center text-light drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]",
                       children: "$19.95"
                     }, undefined, false, undefined, this),
-                    jsx_dev_runtime3.jsxDEV("p", {
+                    jsx_dev_runtime4.jsxDEV("p", {
                       className: "text-lg italic text-light opacity-60",
                       children: "+ shipping & handling"
                     }, undefined, false, undefined, this)
                   ]
                 }, undefined, true, undefined, this),
-                jsx_dev_runtime3.jsxDEV(Button, {
+                jsx_dev_runtime4.jsxDEV(Button, {
                   variant: "green-highlight",
                   onClick: () => alert("Added to cart!"),
                   children: "Add to Cart"
@@ -23630,28 +23643,32 @@ function Hero({ className }) {
   }, undefined, true, undefined, this);
 }
 var GridCard = ({ children, className }) => {
-  return jsx_dev_runtime3.jsxDEV("div", {
+  return jsx_dev_runtime4.jsxDEV("div", {
     className: clsx_default("bg-accent p-2 rounded-3xl overflow-hidden", className),
     children
   }, undefined, false, undefined, this);
 };
 var Testimony = () => {
-  return jsx_dev_runtime3.jsxDEV("div", {
+  return jsx_dev_runtime4.jsxDEV("div", {
     className: "bg-transparent items-center justify-center text-center flex flex-col p-8 overflow-none text-light tracking-wider",
     children: [
-      jsx_dev_runtime3.jsxDEV("img", {
+      jsx_dev_runtime4.jsxDEV("img", {
         src: "./public/five-stars.webp",
         alt: "hero",
         className: "max-w-[400px]"
       }, undefined, false, undefined, this),
-      jsx_dev_runtime3.jsxDEV("div", {
+      jsx_dev_runtime4.jsxDEV("div", {
         className: "flex flex-col gap-y-8",
         children: [
-          jsx_dev_runtime3.jsxDEV("p", {
+          jsx_dev_runtime4.jsxDEV("p", {
+            className: "text-6xl font-[Caprasimo] semi-bold tracking-wider text-light",
+            children: "Tactical Zyn Holster"
+          }, undefined, false, undefined, this),
+          jsx_dev_runtime4.jsxDEV("p", {
             className: "prose text-light italic text-xl opacity-90 leading-8",
             children: '"Easily the best product of the year, hands down, literally!"'
           }, undefined, false, undefined, this),
-          jsx_dev_runtime3.jsxDEV("p", {
+          jsx_dev_runtime4.jsxDEV("p", {
             className: "text-normal font-thin",
             children: "- Zynston Churchill"
           }, undefined, false, undefined, this)
@@ -23663,9 +23680,9 @@ var Testimony = () => {
 
 // src/components/Text.tsx
 var import_react2 = __toESM(require_react(), 1);
-var jsx_dev_runtime4 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1);
 var getVariant = function(variant, className) {
-  const comp = jsx_dev_runtime4.jsxDEV("p", {
+  const comp = jsx_dev_runtime5.jsxDEV("p", {
     className: "tracking"
   }, undefined, false, undefined, this);
   return clsx_default("text-light prose", {
@@ -23676,7 +23693,7 @@ var getVariant = function(variant, className) {
 };
 var Text = ({ variant, className, children, ...props }) => {
   const classNames = import_react2.useMemo(() => getVariant(variant, className), [variant, className]);
-  return jsx_dev_runtime4.jsxDEV("p", {
+  return jsx_dev_runtime5.jsxDEV("p", {
     className: classNames,
     ...props,
     children
@@ -23684,23 +23701,23 @@ var Text = ({ variant, className, children, ...props }) => {
 };
 
 // src/components/Zymbabwe.tsx
-var jsx_dev_runtime5 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime(), 1);
 var Zynbabwe = () => {
-  return jsx_dev_runtime5.jsxDEV("div", {
+  return jsx_dev_runtime6.jsxDEV("div", {
     className: "w-80 h-14 items-center justify-center block",
-    children: jsx_dev_runtime5.jsxDEV(Text, {
+    children: jsx_dev_runtime6.jsxDEV(Text, {
       variant: "heading-1",
       className: "font-[Caprasimo] text-center self-center drop-shadow-[0_2px_0px_rgba(0,0,0,0.3)] hover:scale-105 transition-all duration-150",
       children: [
-        jsx_dev_runtime5.jsxDEV("span", {
+        jsx_dev_runtime6.jsxDEV("span", {
           className: "text-z-green",
           children: "ZYN"
         }, undefined, false, undefined, this),
-        jsx_dev_runtime5.jsxDEV("span", {
+        jsx_dev_runtime6.jsxDEV("span", {
           className: "text-z-yellow",
           children: "BAB"
         }, undefined, false, undefined, this),
-        jsx_dev_runtime5.jsxDEV("span", {
+        jsx_dev_runtime6.jsxDEV("span", {
           className: "text-z-red",
           children: "WE"
         }, undefined, false, undefined, this)
@@ -23710,17 +23727,17 @@ var Zynbabwe = () => {
 };
 
 // src/components/wiggle.tsx
-var jsx_dev_runtime6 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime(), 1);
 var Wiggle = () => {
-  return jsx_dev_runtime6.jsxDEV("svg", {
+  return jsx_dev_runtime7.jsxDEV("svg", {
     transform: "scale(-1,1)",
     width: "4126",
     height: "30",
     fill: "#242527",
     xmlns: "http://www.w3.org/2000/svg",
     className: "overflow-x-hidden shrink-0",
-    children: jsx_dev_runtime6.jsxDEV("g", {
-      children: jsx_dev_runtime6.jsxDEV("path", {
+    children: jsx_dev_runtime7.jsxDEV("g", {
+      children: jsx_dev_runtime7.jsxDEV("path", {
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M0 30V0H783.742H853.615H1637.36H2418.77H2490.97H3272.39H4126V21.081C4111.47 24.7885 4091.24 27.9635 4069.66 24.3448C4067.25 23.94 4064.98 23.5578 4062.85 23.1981C4032.2 18.0269 4029.07 17.4983 4007.42 21.2164C3984.26 25.1931 3970.41 25.8353 3961.1 25.0021C3953.82 24.3493 3944.47 23.0709 3928.57 13.7172C3918.5 8.31165 3900.9 1.80665 3878.71 5.19527C3870.35 6.47235 3862.25 8.84554 3853.82 11.3147C3839.87 15.3972 3825.04 19.7419 3806.66 19.8281C3792.9 19.8927 3784.73 17.5918 3778.34 15.7941C3771.03 13.7367 3766.06 12.3382 3757.75 15.8981C3742.17 22.5685 3720.85 18.2233 3713.5 15.8935C3706.15 13.5638 3691.65 10.9392 3673.64 16.1222C3671.38 16.775 3668.96 17.509 3666.42 18.2793C3648.83 23.6253 3625.48 30.7201 3606.05 24.5493C3604.47 24.0459 3602.92 23.5475 3601.4 23.0587C3580.54 16.3357 3565.26 11.4114 3532.22 19.8281C3494.91 29.3322 3462.73 32.4366 3438.47 17.7526C3417.1 4.81926 3374.36 -0.461451 3343.49 13.7172C3319.12 24.9088 3298.26 29.7052 3272.39 30C3246.51 29.7052 3225.65 24.9088 3201.28 13.7172C3170.41 -0.461451 3127.67 4.81926 3106.3 17.7526C3082.04 32.4366 3049.86 29.3322 3012.55 19.8281C2979.51 11.4114 2964.23 16.3357 2943.37 23.0587C2941.85 23.5475 2940.3 24.0459 2938.72 24.5493C2919.29 30.7201 2895.94 23.6253 2878.35 18.2793L2878.34 18.2771L2878.31 18.2689C2875.79 17.5024 2873.38 16.772 2871.13 16.1222C2853.12 10.9392 2838.62 13.5638 2831.27 15.8935C2823.92 18.2233 2802.6 22.5685 2787.02 15.8981C2778.71 12.3382 2773.74 13.7367 2766.43 15.7941C2760.04 17.5918 2751.87 19.8927 2738.11 19.8281C2719.73 19.7419 2704.9 15.3972 2690.95 11.3147C2682.52 8.84554 2674.42 6.47235 2666.06 5.19527C2643.87 1.80665 2626.27 8.31165 2616.2 13.7172C2600.3 23.0709 2590.95 24.3493 2583.67 25.0021C2574.36 25.8353 2560.51 25.1931 2537.35 21.2164C2515.7 17.4983 2512.57 18.0269 2481.92 23.1981C2479.79 23.5578 2477.52 23.94 2475.11 24.3448C2468.18 25.5075 2461.38 25.9688 2454.87 25.9365C2448.36 25.9688 2441.57 25.5075 2434.63 24.3448C2432.22 23.94 2429.95 23.5578 2427.82 23.1981C2397.17 18.0269 2394.04 17.4983 2372.39 21.2164C2349.23 25.1931 2335.38 25.8353 2326.08 25.0021C2318.79 24.3493 2309.44 23.0709 2293.55 13.7172C2283.47 8.31165 2265.87 1.80665 2243.69 5.19527C2235.32 6.47235 2227.22 8.84554 2218.79 11.3147C2204.85 15.3972 2190.01 19.7419 2171.63 19.8281C2157.87 19.8927 2149.7 17.5918 2143.31 15.7941C2136 13.7367 2131.03 12.3382 2122.72 15.8981C2107.14 22.5685 2085.82 18.2233 2078.47 15.8935C2071.13 13.5638 2056.62 10.9392 2038.61 16.1222C2036.35 16.775 2033.93 17.509 2031.4 18.2794C2013.8 23.6253 1990.46 30.7201 1971.02 24.5493C1969.45 24.0479 1967.91 23.5516 1966.39 23.0646L1966.38 23.0586C1945.51 16.3356 1930.23 11.4114 1897.19 19.8281C1859.88 29.3322 1827.7 32.4366 1803.44 17.7526C1782.08 4.81926 1739.33 -0.461451 1708.46 13.7172C1684.09 24.9088 1663.23 29.7052 1637.36 30C1611.48 29.7052 1590.62 24.9088 1566.25 13.7172C1535.38 -0.461451 1492.64 4.81926 1471.28 17.7526C1447.02 32.4366 1414.83 29.3322 1377.52 19.8281C1344.48 11.4114 1329.2 16.3356 1308.34 23.0586L1308.32 23.0646L1308.31 23.0678C1306.8 23.5537 1305.27 24.049 1303.69 24.5493C1284.26 30.7201 1260.91 23.6253 1243.32 18.2794C1240.78 17.509 1238.37 16.775 1236.1 16.1222C1218.09 10.9392 1203.59 13.5638 1196.24 15.8935C1188.89 18.2233 1167.57 22.5685 1152 15.8981C1143.69 12.3382 1138.72 13.7367 1131.41 15.7941C1125.02 17.5918 1116.84 19.8927 1103.09 19.8281C1084.7 19.7419 1069.87 15.3971 1055.93 11.3146C1047.5 8.84552 1039.39 6.47234 1031.03 5.19527C1008.84 1.80665 991.24 8.31165 981.167 13.7172C965.274 23.0709 955.922 24.3493 948.639 25.0021C939.335 25.8353 925.48 25.1931 902.325 21.2164C880.677 17.4983 877.543 18.027 846.892 23.1982C844.76 23.5579 842.495 23.94 840.081 24.3448C832.733 25.577 825.542 26.0215 818.679 25.9255C811.816 26.0215 804.625 25.577 797.276 24.3448C794.876 23.9422 792.622 23.562 790.5 23.204L790.477 23.2001L790.465 23.1982C759.814 18.027 756.68 17.4983 735.032 21.2164C711.878 25.1931 698.022 25.8353 688.718 25.0021C681.436 24.3493 672.083 23.0709 656.19 13.7172C646.117 8.31165 628.517 1.80665 606.328 5.19527C597.966 6.47235 589.862 8.84554 581.43 11.3147C567.49 15.3972 552.653 19.7419 534.272 19.8281C520.517 19.8927 512.34 17.5918 505.952 15.7941C498.641 13.7367 493.671 12.3382 485.36 15.8981C469.787 22.5685 448.463 18.2233 441.116 15.8935C433.77 13.5638 419.264 10.9392 401.258 16.1222C398.991 16.775 396.575 17.509 394.04 18.2794C376.447 23.6253 353.099 30.7201 333.667 24.5493C332.087 24.0475 330.546 23.5507 329.033 23.0633L329.02 23.0591L329.019 23.0586C308.155 16.3357 292.874 11.4114 259.835 19.8281C222.527 29.3322 190.34 32.4366 166.081 17.7526C144.72 4.81926 101.975 -0.461451 71.1061 13.7172C46.7354 24.9088 25.8752 29.7052 0 30Z"
@@ -23730,113 +23747,116 @@ var Wiggle = () => {
 };
 
 // src/components/Navigation.tsx
-var jsx_dev_runtime7 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime(), 1);
 var Navigation = () => {
-  return jsx_dev_runtime7.jsxDEV("div", {
+  return jsx_dev_runtime8.jsxDEV("div", {
     className: "absolute top-0 left-0 right-0 z-50 flex-col overflow-x-clip bg-z-dark",
     children: [
-      jsx_dev_runtime7.jsxDEV("div", {
+      jsx_dev_runtime8.jsxDEV("div", {
         className: "bg-accent py-6 pt-6 px-16 flex justify-between items-center",
         children: [
-          jsx_dev_runtime7.jsxDEV("div", {
+          jsx_dev_runtime8.jsxDEV("div", {
             className: "basis-1/2",
-            children: jsx_dev_runtime7.jsxDEV(Zynbabwe, {}, undefined, false, undefined, this)
+            children: jsx_dev_runtime8.jsxDEV(Zynbabwe, {}, undefined, false, undefined, this)
           }, undefined, false, undefined, this),
-          jsx_dev_runtime7.jsxDEV("div", {
+          jsx_dev_runtime8.jsxDEV("div", {
             className: "flex flex-row justify-between basis-1/6 text-light font-bold",
             children: [
-              jsx_dev_runtime7.jsxDEV(NavigationButton, {
+              jsx_dev_runtime8.jsxDEV(NavigationButton, {
                 name: "Home",
                 isActive: true
               }, undefined, false, undefined, this),
-              jsx_dev_runtime7.jsxDEV(NavigationButton, {
+              jsx_dev_runtime8.jsxDEV(NavigationButton, {
                 name: "Shop"
               }, undefined, false, undefined, this),
-              jsx_dev_runtime7.jsxDEV(NavigationButton, {
+              jsx_dev_runtime8.jsxDEV(NavigationButton, {
                 name: "Deals"
               }, undefined, false, undefined, this),
-              jsx_dev_runtime7.jsxDEV(NavigationButton, {
+              jsx_dev_runtime8.jsxDEV(NavigationButton, {
                 name: "About"
               }, undefined, false, undefined, this)
             ]
           }, undefined, true, undefined, this)
         ]
       }, undefined, true, undefined, this),
-      jsx_dev_runtime7.jsxDEV(Wiggle, {}, undefined, false, undefined, this)
+      jsx_dev_runtime8.jsxDEV(Wiggle, {}, undefined, false, undefined, this)
     ]
   }, undefined, true, undefined, this);
 };
 var NavigationButton = ({ name, isActive = false }) => {
-  return jsx_dev_runtime7.jsxDEV("div", {
+  return jsx_dev_runtime8.jsxDEV("div", {
     className: "",
-    children: jsx_dev_runtime7.jsxDEV("button", {
-      className: clsx_default("text-light font-bold text-lg tracking-wide px-2 flex-auto flex", isActive ? "opacity-100" : "opacity-30"),
+    children: jsx_dev_runtime8.jsxDEV("button", {
+      className: clsx_default("text-light font-bold text-lg tracking-wide px-2 flex-auto flex hover:scale-105 transition-all duration-150", isActive ? "opacity-100" : "opacity-30"),
       children: name
     }, undefined, false, undefined, this)
   }, undefined, false, undefined, this);
 };
 
 // src/App.tsx
-var jsx_dev_runtime8 = __toESM(require_jsx_dev_runtime(), 1);
+var jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime(), 1);
 function App() {
-  return jsx_dev_runtime8.jsxDEV("html", {
+  return jsx_dev_runtime9.jsxDEV("html", {
     className: "bg-accent flex flex-col flex-1",
     children: [
-      jsx_dev_runtime8.jsxDEV("head", {
+      jsx_dev_runtime9.jsxDEV("head", {
         children: [
-          jsx_dev_runtime8.jsxDEV("meta", {
+          jsx_dev_runtime9.jsxDEV("meta", {
             charSet: "utf-8"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("title", {
+          jsx_dev_runtime9.jsxDEV("title", {
             children: "Zynbabwe\u2122"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("meta", {
+          jsx_dev_runtime9.jsxDEV("meta", {
             name: "author",
             content: "Zynbabwe\u2122 Co."
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("meta", {
+          jsx_dev_runtime9.jsxDEV("meta", {
             name: "description",
             content: "The official store for Zynbabwe!"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("meta", {
+          jsx_dev_runtime9.jsxDEV("meta", {
             name: "viewport",
             content: "width=device-width, initial-scale=1"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("link", {
+          jsx_dev_runtime9.jsxDEV("link", {
             rel: "apple-touch-icon",
             sizes: "180x180",
             href: "./public/apple-touch-icon.png"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("link", {
+          jsx_dev_runtime9.jsxDEV("link", {
             rel: "icon",
             type: "image/png",
             sizes: "32x32",
             href: "./public/favicon-32x32.png"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("link", {
+          jsx_dev_runtime9.jsxDEV("link", {
             rel: "icon",
             type: "image/png",
             sizes: "16x16",
             href: "./public/favicon-16x16.png"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("link", {
+          jsx_dev_runtime9.jsxDEV("link", {
             rel: "manifest",
             href: "./public/site.webmanifest"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV("link", {
+          jsx_dev_runtime9.jsxDEV("link", {
             href: "./public/output.css",
             rel: "stylesheet"
           }, undefined, false, undefined, this)
         ]
       }, undefined, true, undefined, this),
-      jsx_dev_runtime8.jsxDEV("body", {
+      jsx_dev_runtime9.jsxDEV("body", {
         className: "flex flex-col w-full flex-grow py-32 fixed overflow-x-hidden bg-z-dark",
         children: [
-          jsx_dev_runtime8.jsxDEV(Navigation, {}, undefined, false, undefined, this),
-          jsx_dev_runtime8.jsxDEV(Container, {
-            className: "flex-col flex flex-1",
-            children: jsx_dev_runtime8.jsxDEV(Hero, {
-              className: "flex flex-1 z-10"
+          jsx_dev_runtime9.jsxDEV(AfricanTrees, {
+            className: "opacity-20"
+          }, undefined, false, undefined, this),
+          jsx_dev_runtime9.jsxDEV(Navigation, {}, undefined, false, undefined, this),
+          jsx_dev_runtime9.jsxDEV(Container, {
+            className: "flex-col flex flex-1 z-10",
+            children: jsx_dev_runtime9.jsxDEV(Hero, {
+              className: "flex flex-1"
             }, undefined, false, undefined, this)
           }, undefined, false, undefined, this)
         ]
@@ -23846,5 +23866,5 @@ function App() {
 }
 
 // client.tsx
-var jsx_dev_runtime9 = __toESM(require_jsx_dev_runtime(), 1);
-client.hydrateRoot(document, jsx_dev_runtime9.jsxDEV(App, {}, undefined, false, undefined, this));
+var jsx_dev_runtime10 = __toESM(require_jsx_dev_runtime(), 1);
+client.hydrateRoot(document, jsx_dev_runtime10.jsxDEV(App, {}, undefined, false, undefined, this));

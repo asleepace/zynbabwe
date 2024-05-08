@@ -26,7 +26,7 @@ const NavigationButton = ({ name, isActive = false }: any) => {
     <div className="">
       <button
         className={clsx(
-          'text-light font-bold text-lg tracking-wide px-2 flex-auto flex',
+          'text-light font-bold text-lg tracking-wide px-2 flex-auto flex hover:scale-105 transition-all duration-150',
           isActive ? 'opacity-100' : 'opacity-30',
         )}
       >

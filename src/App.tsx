@@ -1,3 +1,4 @@
+import { AfricanTrees } from './components/AfricanTrees'
 import { Container } from './components/Container'
 import { Hero } from './components/Hero'
 import { Navigation } from './components/Navigation'
@@ -33,12 +34,11 @@ export function App() {
         <link href="./public/output.css" rel="stylesheet"></link>
       </head>
       <body className="flex flex-col w-full flex-grow py-32 fixed overflow-x-hidden bg-z-dark">
+        <AfricanTrees className='opacity-20' />
         <Navigation />
-        <Container className="flex-col flex flex-1">
-          <Hero className="flex flex-1 z-10" />
+        <Container className="flex-col flex flex-1 z-10">
+          <Hero className="flex flex-1" />
         </Container>
-        {/* <PalmTree className="z-0" />
-        <PalmTree className="scale-75 -right-[100px] top-[1000px] z-0" /> */}
       </body>
     </html>
   )

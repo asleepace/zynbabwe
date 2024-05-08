@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { memo, type PropsWithChildren } from 'react'
+import { Fragment, memo, type PropsWithChildren } from 'react'
 
 export type JSXButtonProps = React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -15,10 +15,11 @@ export type ButtonProps = JSXButtonProps & {
   children?: React.ReactNode
   className?: string
   text?: string
+  growOnHover?: boolean
 }
 
 export const Button = memo(
-  ({ variant, text, children, className }: ButtonProps) => {
+  ({ variant, text, children, growOnHover = true, className }: ButtonProps) => {
     return (
       <button
         className={clsx(
