@@ -20,4 +20,6 @@ const backend = new Elysia()
 // Debugging
 // output the server url to the console for easy access, as well as
 // any other items you may want to debug.
+console.clear()
+console.log(`[zynbabwe] starting...`)
 console.log(`[zynbabwe] running on ${backend.server?.url}`)

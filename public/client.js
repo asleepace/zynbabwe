@@ -23540,15 +23540,23 @@ function App() {
             charSet: "utf-8"
           }, undefined, false, undefined, this),
           jsx_dev_runtime.jsxDEV("title", {
-            children: "Bun, Elysia & React"
+            children: "Zynbabwe\u2122"
+          }, undefined, false, undefined, this),
+          jsx_dev_runtime.jsxDEV("meta", {
+            name: "author",
+            content: "Zynodyne inc."
           }, undefined, false, undefined, this),
           jsx_dev_runtime.jsxDEV("meta", {
             name: "description",
-            content: "Bun, Elysia & React"
+            content: "The official store for Zynbabwe inspired products, tech and more!"
           }, undefined, false, undefined, this),
           jsx_dev_runtime.jsxDEV("meta", {
             name: "viewport",
             content: "width=device-width, initial-scale=1"
+          }, undefined, false, undefined, this),
+          jsx_dev_runtime.jsxDEV("link", {
+            href: "./public/output.css",
+            rel: "stylesheet"
           }, undefined, false, undefined, this)
         ]
       }, undefined, true, undefined, this),
