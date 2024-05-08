@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         light: 'rgba(255, 255, 255, 0.9)',
+        accent: '#242527',
         'z-dark': 'rgb(17, 17, 17)',
         'z-green': '#009739',
         'z-yellow': '#FCE300',
