@@ -5,7 +5,7 @@ import { Wiggle } from './wiggle'
 export const Navigation = () => {
   return (
     <div className="absolute top-0 left-0 right-0 z-50 flex-col overflow-x-clip">
-      <div className="bg-accent px-8 py-4 flex justify-between items-center px-20">
+      <div className="bg-accent py-4 pt-6 px-16 flex justify-between items-center">
         <div className="basis-1/2">
           <Zynbabwe />
         </div>
