@@ -14,7 +14,10 @@ await Bun.build({ entrypoints: ['./client.tsx'], outdir: './public' })
 // and render the react app to a readable stream.
 const backend = new Elysia()
   .use(staticPlugin())
-  .get('/', stream(App))
+  .get('/', () => {
+    console.log('[zynbabwe] rendering <app />')
+    return stream(App)
+  })
   .listen(3000)
 
 // Debugging

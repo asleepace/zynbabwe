@@ -23528,56 +23528,118 @@ var require_jsx_dev_runtime = __commonJS((exports, module) => {
 var client = __toESM(require_client(), 1);
 
 // src/App.tsx
+var import_react2 = __toESM(require_react(), 1);
+
+// node_modules/clsx/dist/clsx.mjs
+var r = function(e) {
+  var t, f, n = "";
+  if (typeof e == "string" || typeof e == "number")
+    n += e;
+  else if (typeof e == "object")
+    if (Array.isArray(e)) {
+      var o = e.length;
+      for (t = 0;t < o; t++)
+        e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
+    } else
+      for (f in e)
+        e[f] && (n && (n += " "), n += f);
+  return n;
+};
+function clsx() {
+  for (var e, t, f = 0, n = "", o = arguments.length;f < o; f++)
+    (e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
+  return n;
+}
+var clsx_default = clsx;
+
+// src/components/Text.tsx
 var import_react = __toESM(require_react(), 1);
 var jsx_dev_runtime = __toESM(require_jsx_dev_runtime(), 1);
+var getVariant = function(variant, className) {
+  const comp = jsx_dev_runtime.jsxDEV("p", {
+    className: "tracking"
+  }, undefined, false, undefined, this);
+  return clsx_default("text-light prose", {
+    "text-lg tracking-wide": variant === "body",
+    "body-bold": variant === "body-bold",
+    "text-5xl font-black tracking-tighter": variant === "heading-1"
+  }, className);
+};
+var Text = ({ variant, className, children, ...props }) => {
+  const classNames = import_react.useMemo(() => getVariant(variant, className), [variant, className]);
+  return jsx_dev_runtime.jsxDEV("p", {
+    className: classNames,
+    ...props,
+    children
+  }, undefined, false, undefined, this);
+};
+
+// src/App.tsx
+var jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
 function App() {
-  const [count, setCount] = import_react.useState(0);
-  return jsx_dev_runtime.jsxDEV("html", {
+  const [count, setCount] = import_react2.useState(0);
+  return jsx_dev_runtime2.jsxDEV("html", {
     children: [
-      jsx_dev_runtime.jsxDEV("head", {
+      jsx_dev_runtime2.jsxDEV("head", {
         children: [
-          jsx_dev_runtime.jsxDEV("meta", {
+          jsx_dev_runtime2.jsxDEV("meta", {
             charSet: "utf-8"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime.jsxDEV("title", {
+          jsx_dev_runtime2.jsxDEV("title", {
             children: "Zynbabwe\u2122"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime.jsxDEV("meta", {
+          jsx_dev_runtime2.jsxDEV("meta", {
             name: "author",
             content: "Zynodyne inc."
           }, undefined, false, undefined, this),
-          jsx_dev_runtime.jsxDEV("meta", {
+          jsx_dev_runtime2.jsxDEV("meta", {
             name: "description",
             content: "The official store for Zynbabwe inspired products, tech and more!"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime.jsxDEV("meta", {
+          jsx_dev_runtime2.jsxDEV("meta", {
             name: "viewport",
             content: "width=device-width, initial-scale=1"
           }, undefined, false, undefined, this),
-          jsx_dev_runtime.jsxDEV("link", {
+          jsx_dev_runtime2.jsxDEV("link", {
             href: "./public/output.css",
             rel: "stylesheet"
           }, undefined, false, undefined, this)
         ]
       }, undefined, true, undefined, this),
-      jsx_dev_runtime.jsxDEV("body", {
-        children: [
-          jsx_dev_runtime.jsxDEV("h1", {
-            children: [
-              "Counter ",
-              count
-            ]
-          }, undefined, true, undefined, this),
-          jsx_dev_runtime.jsxDEV("button", {
-            onClick: () => setCount(count + 1),
-            children: "Increment"
-          }, undefined, false, undefined, this)
-        ]
-      }, undefined, true, undefined, this)
+      jsx_dev_runtime2.jsxDEV("body", {
+        className: "h-full",
+        children: jsx_dev_runtime2.jsxDEV("div", {
+          className: "flex flex-1 p-8 flex-col",
+          children: [
+            jsx_dev_runtime2.jsxDEV(Text, {
+              variant: "heading-1",
+              children: [
+                jsx_dev_runtime2.jsxDEV("span", {
+                  className: "text-z-green",
+                  children: "ZYN"
+                }, undefined, false, undefined, this),
+                jsx_dev_runtime2.jsxDEV("span", {
+                  className: "text-z-yellow",
+                  children: "BAB"
+                }, undefined, false, undefined, this),
+                jsx_dev_runtime2.jsxDEV("span", {
+                  className: "text-z-red",
+                  children: "WE"
+                }, undefined, false, undefined, this)
+              ]
+            }, undefined, true, undefined, this),
+            jsx_dev_runtime2.jsxDEV(Text, {
+              className: "text-red-500",
+              variant: "body",
+              children: "The official store for Zynbabwe inspired products, tech and more!"
+            }, undefined, false, undefined, this)
+          ]
+        }, undefined, true, undefined, this)
+      }, undefined, false, undefined, this)
     ]
   }, undefined, true, undefined, this);
 }
 
 // client.tsx
-var jsx_dev_runtime2 = __toESM(require_jsx_dev_runtime(), 1);
-client.hydrateRoot(document, jsx_dev_runtime2.jsxDEV(App, {}, undefined, false, undefined, this));
+var jsx_dev_runtime3 = __toESM(require_jsx_dev_runtime(), 1);
+client.hydrateRoot(document, jsx_dev_runtime3.jsxDEV(App, {}, undefined, false, undefined, this));
