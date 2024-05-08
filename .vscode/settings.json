@@ -1,7 +1,9 @@
 {
-  "editor.formatOnSave": true,
   "prettier.trailingComma": "all",
   "prettier.singleQuote": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 240,
+  "editor.formatOnSave": true,
   "prettier.semi": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
@@ -12,5 +14,8 @@
     "elysiajs",
     "outdir",
     "@tailwind",
+    "Zynbabwe",
+    "Zynston",
+    "clsx",
   ]
 }
